@@ -4,10 +4,10 @@
 # Cuando usar React vs Framework
 
 -> Primero tendremos que aprender las bases (Js/HTML/CSS) 
--> ES EL FRAMEWORK CON MÁS DEMANDA LABORAL 
+-> ES EL FRAMEWORK CON MÁS DEMANDA LABORAL (2025)
 -> Renderiza del lado del cliente
 
-Idea principal: libreroa para generar aplicaciones en base a componentes
+Idea principal: librerias para generar aplicaciones en base a componentes
 Ejemplos: 
 
     -Material UI
@@ -15,4 +15,13 @@ Ejemplos:
     -Chakra UI
     -Tailwind CSS
     -Framer Motion
+
+->Perfecto para MVC --> MODELO / VISTA / CONTROLADOR junto a MVVM --> MODELO / VISTA / VIEW MODEL 
+
+# Ventajas Principales 
+
+    -Rápido 
+    -Fácil 
+    -Simple
+    -Cómodo
 
