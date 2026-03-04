@@ -24,4 +24,11 @@ Ejemplos:
     -Fácil 
     -Simple
     -Cómodo
+    -Todo en el cliente (dinámico)
+
+
+# Datos interesantes 
+
+Tiene el FRAMEWORKS para el FRAMEWORK --> SolidJs, NextJs...
+
 
