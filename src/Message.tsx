@@ -2,7 +2,12 @@
 function Message() {
 
     //JSX - JavaScript XML
-    return <h1>Hello, World!</h1>
+    const name = "Pepe";
+    if (name) {
+        return <h1>Hello, {name}</h1>
+    }else { 
+        return <h1>Hello, Stranger</h1>
+    }
 }
 
 export default Message;
