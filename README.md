@@ -33,4 +33,10 @@ Tiene el FRAMEWORKS para el FRAMEWORK --> SolidJs, NextJs...
 
 ## Primeros pasos 
 
-    -
+    -Vemos si tenemos Node.js instalado comando: node -v 
+    -Comprobamos versión de npm: npm -v 
+    -Para crear la app de React: npm create vite@latest . y nos realizara una serie de preguntas
+    -Tendremos que instalar las distintas  npm install
+    -Para realizar pruebas en local usaremos el comando npm run dev
+    
+
