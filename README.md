@@ -60,5 +60,5 @@ El luenguaje de programcación usado no es HTML es JSX que es JavaScript a XML.(
 Apartir de aquí pasamos a la rama developer
 
 Hemos modificado App para ver como se muestran los elementos por pantalla .
-Tambien demostramos queReact se basa en el contenido dinámico cambiando Hello, World por Hello, Pepe.{}-->cualquier expersión de JS
+Tambien demostramos que React se basa en el contenido dinámico cambiando Hello, World por Hello, Pepe.{}-->cualquier expersión de JS
 
