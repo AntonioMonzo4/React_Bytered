@@ -1,64 +1,16 @@
-# REPOSITORIO CREADO PARA LOS ALUMNOS DE BYTERED EN PRÁCTICAS 
--------------------------------------------------------------------------------------------------------
+# React + Vite
 
-### Cuando usar React vs Framework
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
--> Primero tendremos que aprender las bases (Js/HTML/CSS) 
--> ES EL FRAMEWORK CON MÁS DEMANDA LABORAL (2025)
--> Renderiza del lado del cliente
+Currently, two official plugins are available:
 
-Idea principal: librerias para generar aplicaciones en base a componentes
-Ejemplos: 
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-    -Material UI
-    -Ant Design
-    -Chakra UI
-    -Tailwind CSS
-    -Framer Motion
+## React Compiler
 
-->Perfecto para MVC --> MODELO / VISTA / CONTROLADOR junto a MVVM --> MODELO / VISTA / VIEW MODEL 
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-### Ventajas Principales 
+## Expanding the ESLint configuration
 
-    -Rápido 
-    -Fácil 
-    -Simple
-    -Cómodo
-    -Todo en el cliente (dinámico)
-
-
-### Datos interesantes 
-
-Tiene el FRAMEWORKS para el FRAMEWORK --> SolidJs, NextJs...
-
-## Primeros pasos 
-
-    -Vemos si tenemos Node.js instalado comando: node -v 
-    -Comprobamos versión de npm: npm -v 
-    -Para crear la app de React: npm create vite@latest . y nos realizara una serie de preguntas
-    -Tendremos que instalar las distintas  npm install
-    -Para realizar pruebas en local usaremos el comando npm run dev
-    
-## Estrutura del Proyecto 
-
-->node_modules: carpeta donde etan instaladas todas las bibliotecas de terceros y otras herramientas NO TOCAR 
-->public: recursos públicos de nuestra app/web (imágenes, vídeos, icons...) 
-->src: código funete de nuestra aplicación 
-
-### Ejercicio
-
---> Encuentra los archivos de entrada al código fuente y que recorrido hace hasta mostrar un elemento 
-
-## Como creamos un componente en React 
-
-Src-->nuevo archivo-->Nombre.tsx
-Los podemos crear mediante clases o mediante funciones. Como la "moda" es crear atraves de funciones es como lo vamos a hacer aquí.
-Usaremos PascalCasing.
-El luenguaje de programcación usado no es HTML es JSX que es JavaScript a XML.(BABELJS.io)
-
-
-Apartir de aquí pasamos a la rama developer
-
-Hemos modificado App para ver como se muestran los elementos por pantalla .
-Tambien demostramos que React se basa en el contenido dinámico cambiando Hello, World por Hello, Pepe.{}-->cualquier expersión de JS
-
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
