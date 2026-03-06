@@ -3,18 +3,32 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Input from './Input'
+import InputButton from './InputButton'
+
+
+//export default function App() { 
 
 function App() {
  
 
   return (
     <>
-    {console.log('Hello world')}
-    <Input></Input>
-    
-      <Input></Input>
+    <InputButton/>
     </>
   )
 }
 
-export default App
+
+
+function App1() {
+ 
+
+  return (
+    <>
+    <InputButton/>
+    </>
+  )
+}
+
+export default {App, App1};
+
