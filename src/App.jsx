@@ -47,37 +47,70 @@ function App() {
   )*/
 
 
-    const [email, setEmail] = useState('')//estado para el email, con su función para actualizarlo. Puedes asignar un valor inicial al estado, en este caso una cadena vacía,F lo que significa que el campo de entrada estará vacío al cargar la aplicación.
-  setEmail('')//inicializamos el estado del email como una cadena vacía
-  //Puedes inicializarlos tambien como un number o un booleano, dependiendo del tipo de dato que quieras manejar en tu aplicación. Por ejemplo, si quieres manejar un contador, podrías inicializar el estado como un número: const [count, setCount] = useState(0).
-  //  Si quieres manejar un estado de activación/desactivación, podrías inicializarlo como un booleano: const [isActive, setIsActive] = useState(false).
+  /*const [email, setEmail] = useState('')//estado para el email, con su función para actualizarlo. Puedes asignar un valor inicial al estado, en este caso una cadena vacía,F lo que significa que el campo de entrada estará vacío al cargar la aplicación.
+setEmail('')//inicializamos el estado del email como una cadena vacía
+//Puedes inicializarlos tambien como un number o un booleano, dependiendo del tipo de dato que quieras manejar en tu aplicación. Por ejemplo, si quieres manejar un contador, podrías inicializar el estado como un número: const [count, setCount] = useState(0).
+//  Si quieres manejar un estado de activación/desactivación, podrías inicializarlo como un booleano: const [isActive, setIsActive] = useState(false).
 
-  const [username, setUsername] = useState('')//estado para el username, con su función para actualizarlo. Puedes asignar un valor inicial al estado, en este caso una cadena vacía, lo que significa que el campo de entrada estará vacío al cargar la aplicación.
-  setUsername('')//inicializamos el estado del username como una cadena vacía 
+const [username, setUsername] = useState('')//estado para el username, con su función para actualizarlo. Puedes asignar un valor inicial al estado, en este caso una cadena vacía, lo que significa que el campo de entrada estará vacío al cargar la aplicación.
+setUsername('')//inicializamos el estado del username como una cadena vacía 
 
-  const [password, setPassword] = useState('')//estado para el password, con su función para actualizarlo. Puedes asignar un valor inicial al estado, en este caso una cadena vacía, lo que significa que el campo de entrada estará vacío al cargar la aplicación.
-  setPassword('')//inicializamos el estado del password como una cadena vacía
-  
-  const [confirmPassword, setConfirmPassword] = useState('')//estado para el confirmPassword, con su función para actualizarlo. Puedes asignar un valor inicial al estado, en este caso una cadena vacía, lo que significa que el campo de entrada estará vacío al cargar la aplicación.
-  setConfirmPassword('')//inicializamos el estado del confirmPassword como una cadena vacía 
+const [password, setPassword] = useState('')//estado para el password, con su función para actualizarlo. Puedes asignar un valor inicial al estado, en este caso una cadena vacía, lo que significa que el campo de entrada estará vacío al cargar la aplicación.
+setPassword('')//inicializamos el estado del password como una cadena vacía
+ 
+const [confirmPassword, setConfirmPassword] = useState('')//estado para el confirmPassword, con su función para actualizarlo. Puedes asignar un valor inicial al estado, en este caso una cadena vacía, lo que significa que el campo de entrada estará vacío al cargar la aplicación.
+setConfirmPassword('')//inicializamos el estado del confirmPassword como una cadena vacía 
+
+return (
+  <>
+    <Profile ayo={username}/>
+    <InputHandler email={email} setEmail={setEmail} username={username} setUsername={setUsername} password={password} setPassword={setPassword} confirmPassword={confirmPassword} setConfirmPassword={setConfirmPassword} />
+  </>
+)*/
+
+
+
+
+
+  const [username, setUsername] = useState('');
+  const [number, setNumber] = useState(0);
+
+  const handleClick = () => {
+    console.log('Username:', username);
+    console.log('Number:', number);
+  }
+
+  const addHandle = () => {
+    setNumber((prevNumber) => prevNumber + 1);
+  }
+
 
   return (
     <>
-      <Profile ayo={username}/>
-      <InputHandler email={email} setEmail={setEmail} username={username} setUsername={setUsername} password={password} setPassword={setPassword} confirmPassword={confirmPassword} setConfirmPassword={setConfirmPassword} />
+      <input
+        type="text"
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
+        placeholder="Escribe tu nombre"
+      />
+      <button onClick={handleClick}>Add</button>
+      <button onClick={addHandle}>+</button>
     </>
   )
-
-
-
-
-
-
-
-
-
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -91,5 +124,5 @@ function App1() {
   )
 }
 
-export default { App, App1 };
+export default App;
 
