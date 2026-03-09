@@ -4,6 +4,9 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Input from './Input'
 import InputButton from './InputButton'
+import Input2 from './Input2'
+import Profile from './Profile'
+import InputHandler from './InputHandler'
 
 /**
  * useState es una función que permite agregar estado a los componentes funcionales en React. 
@@ -18,8 +21,8 @@ import InputButton from './InputButton'
 
 function App() {
 
-  
-  const [email, setEmail] = useState('')//estado para el email, con su función para actualizarlo. Puedes asignar un valor inicial al estado, en este caso una cadena vacía,F lo que significa que el campo de entrada estará vacío al cargar la aplicación. 
+
+  /*const [email, setEmail] = useState('')//estado para el email, con su función para actualizarlo. Puedes asignar un valor inicial al estado, en este caso una cadena vacía,F lo que significa que el campo de entrada estará vacío al cargar la aplicación. 
   setEmail('')//inicializamos el estado del email como una cadena vacía
   //Puedes inicializarlos tambien como un number o un booleano, dependiendo del tipo de dato que quieras manejar en tu aplicación. Por ejemplo, si quieres manejar un contador, podrías inicializar el estado como un número: const [count, setCount] = useState(0).
   //  Si quieres manejar un estado de activación/desactivación, podrías inicializarlo como un booleano: const [isActive, setIsActive] = useState(false).
@@ -37,11 +40,43 @@ function App() {
      *  La función toma el evento (e) como argumento y actualiza el estado email con el nuevo valor ingresado por el usuario utilizando setEmail(e.target.value).
      * 
      * De manera similar, el segundo campo de entrada está vinculado al estado username y se actualiza con setUsername(e.target.value) cada vez que el usuario cambia su valor.
-     */
+     *
 
       }
     </>
+  )*/
+
+
+    const [email, setEmail] = useState('')//estado para el email, con su función para actualizarlo. Puedes asignar un valor inicial al estado, en este caso una cadena vacía,F lo que significa que el campo de entrada estará vacío al cargar la aplicación.
+  setEmail('')//inicializamos el estado del email como una cadena vacía
+  //Puedes inicializarlos tambien como un number o un booleano, dependiendo del tipo de dato que quieras manejar en tu aplicación. Por ejemplo, si quieres manejar un contador, podrías inicializar el estado como un número: const [count, setCount] = useState(0).
+  //  Si quieres manejar un estado de activación/desactivación, podrías inicializarlo como un booleano: const [isActive, setIsActive] = useState(false).
+
+  const [username, setUsername] = useState('')//estado para el username, con su función para actualizarlo. Puedes asignar un valor inicial al estado, en este caso una cadena vacía, lo que significa que el campo de entrada estará vacío al cargar la aplicación.
+  setUsername('')//inicializamos el estado del username como una cadena vacía 
+
+  const [password, setPassword] = useState('')//estado para el password, con su función para actualizarlo. Puedes asignar un valor inicial al estado, en este caso una cadena vacía, lo que significa que el campo de entrada estará vacío al cargar la aplicación.
+  setPassword('')//inicializamos el estado del password como una cadena vacía
+  
+  const [confirmPassword, setConfirmPassword] = useState('')//estado para el confirmPassword, con su función para actualizarlo. Puedes asignar un valor inicial al estado, en este caso una cadena vacía, lo que significa que el campo de entrada estará vacío al cargar la aplicación.
+  setConfirmPassword('')//inicializamos el estado del confirmPassword como una cadena vacía 
+
+  return (
+    <>
+      <Profile ayo={username}/>
+      <InputHandler email={email} setEmail={setEmail} username={username} setUsername={setUsername} password={password} setPassword={setPassword} confirmPassword={confirmPassword} setConfirmPassword={setConfirmPassword} />
+    </>
   )
+
+
+
+
+
+
+
+
+
+
 }
 
 
