@@ -18,17 +18,25 @@ import InputButton from './InputButton'
 
 function App() {
 
-  setEmail('')//inicializamos el estado del email como una cadena vacía
+  
   const [email, setEmail] = useState('')//estado para el email, con su función para actualizarlo. Puedes asignar un valor inicial al estado, en este caso una cadena vacía,F lo que significa que el campo de entrada estará vacío al cargar la aplicación. 
+  setEmail('')//inicializamos el estado del email como una cadena vacía
+  //Puedes inicializarlos tambien como un number o un booleano, dependiendo del tipo de dato que quieras manejar en tu aplicación. Por ejemplo, si quieres manejar un contador, podrías inicializar el estado como un número: const [count, setCount] = useState(0).
+  //  Si quieres manejar un estado de activación/desactivación, podrías inicializarlo como un booleano: const [isActive, setIsActive] = useState(false).
 
+  const [username, setUsername] = useState('')//estado para el username, con su función para actualizarlo. Puedes asignar un valor inicial al estado, en este caso una cadena vacía, lo que significa que el campo de entrada estará vacío al cargar la aplicación.
+  setUsername('')//inicializamos el estado del username como una cadena vacía
 
   return (
     <>
       <input type="text" name="" id="" value={email} onChange={(e) => setEmail(e.target.value)} />
+      <input type="text" name="" id="" value={username} onChange={(e) => setUsername(e.target.value)} />
       { /**
      * value={email} establece el valor del campo de entrada en el estado email. Esto hace que el campo de entrada sea un componente controlado, lo que significa que su valor está controlado por React a través del estado.
      * onChange={(e) => setEmail(e.target.value)} es un manejador de eventos que se ejecuta cada vez que el usuario cambia el valor del campo de entrada.
      *  La función toma el evento (e) como argumento y actualiza el estado email con el nuevo valor ingresado por el usuario utilizando setEmail(e.target.value).
+     * 
+     * De manera similar, el segundo campo de entrada está vinculado al estado username y se actualiza con setUsername(e.target.value) cada vez que el usuario cambia su valor.
      */
 
       }
