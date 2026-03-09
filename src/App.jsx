@@ -72,30 +72,50 @@ return (
 
 
 
-  const [username, setUsername] = useState('');
-  const [number, setNumber] = useState(0);
+  /*  const [username, setUsername] = useState('');
+    const [number, setNumber] = useState(0);
+  
+    const handleClick = () => {
+      console.log('Username:', username);
+      console.log('Number:', number);
+    }
+  
+    const addHandle = () => {
+      setNumber((prevNumber) => prevNumber + 1);
+    }
+  
+  
+    return (
+      <>
+        <input
+          type="text"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          placeholder="Escribe tu nombre"
+        />
+        <button onClick={handleClick}>Add</button>
+        <button onClick={addHandle}>+</button>
+      </>
+    )*/
 
-  const handleClick = () => {
-    console.log('Username:', username);
-    console.log('Number:', number);
-  }
 
-  const addHandle = () => {
-    setNumber((prevNumber) => prevNumber + 1);
-  }
-
-
+  let number = 0;
+  const [numero, setNumero] = useState(0);
   return (
-    <>
-      <input
-        type="text"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-        placeholder="Escribe tu nombre"
-      />
-      <button onClick={handleClick}>Add</button>
-      <button onClick={addHandle}>+</button>
-    </>
+    <div>
+      <p>Number: {number}</p>
+      <button onClick={() => number++}>+</button>
+      { /**
+        * En este caso, el número no se actualizará en la interfaz de usuario cada vez que se haga clic en el botón, ya que React no detecta cambios en variables normales como number. 
+        * Para que React actualice la interfaz de usuario, es necesario utilizar el estado (useState) para manejar el valor del número y su actualización.
+        */}
+      <p>Número: {numero}</p>
+      <button onClick={() => setNumero(numero + 1)}>+</button>
+      { /**
+        * En este caso, cada vez que se haga clic en el botón, el estado numero se actualizará utilizando la función setNumero, lo que hará que React vuelva a renderizar el componente y muestre el nuevo valor del número en la interfaz de usuario.
+        */} 
+        
+    </div>
   )
 }
 
