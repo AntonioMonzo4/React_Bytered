@@ -1,3 +1,16 @@
+/* 
+  Este archivo contiene estilos CSS para la aplicación. Define estilos globales para el documento, incluyendo la fuente, colores, y estilos para elementos como enlaces, botones y encabezados. 
+  También incluye estilos específicos para el modo claro utilizando una consulta de medios (media query) para adaptar los colores y fondos según las preferencias del usuario.
+  El uso de variables CSS (custom properties) y la configuración de color-scheme permiten que la aplicación se adapte automáticamente a los modos claro y oscuro, proporcionando una experiencia de usuario consistente y agradable en ambos casos.
+
+  El modo correcto de usar css en React es importando el archivo css en el componente principal (generalmente App.jsx o main.jsx) y luego aplicando las clases CSS a los elementos HTML dentro de los componentes de React.
+  Aunque también es posible usar estilos en línea (inline styles) o CSS-in-JS, la importación de archivos CSS es una práctica común y sencilla para manejar estilos en aplicaciones React.
+  Tambien se puede crear un archivo CSS específico para cada componente y luego importarlo en ese componente, lo que ayuda a mantener los estilos organizados y específicos para cada parte de la aplicación.
+  En ese caso lo que tendriamos que hacer es crear un archivo CSS para cada componente, por ejemplo, Input.css para el componente Input, y luego importarlo dentro del archivo del componente Input.jsx. 
+  Esto permite que los estilos sean específicos para ese componente y ayuda a mantener el código más organizado.
+*/
+
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
