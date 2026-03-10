@@ -98,7 +98,7 @@ return (
       </>
     )*/
 
-
+ /*
   let number = 0;
   const [numero, setNumero] = useState(0);
   return (
@@ -108,15 +108,42 @@ return (
       { /**
         * En este caso, el número no se actualizará en la interfaz de usuario cada vez que se haga clic en el botón, ya que React no detecta cambios en variables normales como number. 
         * Para que React actualice la interfaz de usuario, es necesario utilizar el estado (useState) para manejar el valor del número y su actualización.
-        */}
+        }
       <p>Número: {numero}</p>
       <button onClick={() => setNumero(numero + 1)}>+</button>
       { /**
         * En este caso, cada vez que se haga clic en el botón, el estado numero se actualizará utilizando la función setNumero, lo que hará que React vuelva a renderizar el componente y muestre el nuevo valor del número en la interfaz de usuario.
-        */} 
+        } 
         
     </div>
   )
+  */
+
+/*
+  const [number,setNumber] = useState(0);
+
+  return <div>
+    {number<10 ? <div>Menor que 10 </div>:<div>Mayor que 10 </div>}
+    {number > 10 && <div>HOLA MUNDO </div>}{//Si la condición de la izquierda es true se añade lo de la derecha}
+}
+    <button onClick={() => {setNumber((prev)=> prev+1 )}}></button>
+
+    </div>
+
+    */
+
+
+
+
+    const [user, setUsers] = useState([
+      {
+        username: "Pepe",
+        age: 27,
+        
+      }
+    ])
+
+    return (<div></div>)
 }
 
 
