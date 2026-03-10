@@ -168,6 +168,8 @@ return (
         
       }
     ])
+    //Utilización de ids para la mejora de componentes en React--> Rendering 
+    
 
     return (<div>{
       user.map((useri) => {
