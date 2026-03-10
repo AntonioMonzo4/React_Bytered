@@ -139,11 +139,41 @@ return (
       {
         username: "Pepe",
         age: 27,
+
+      },
+      {
+        id:1,
+        username: "Pe",
+        age: 27,
+        
+      },{
+        id:2,
+        username: "Pep",
+        age: 271,
+        
+      },{
+        id:3,
+        username: "Pee",
+        age: 271,
+        
+      },{
+        id:4,
+        username: "Ppe",
+        age: 272,
+        
+      },{
+        id:5,
+        username: "epe",
+        age: 23,
         
       }
     ])
 
-    return (<div></div>)
+    return (<div>{
+      user.map((useri) => {
+        return<div key = {useReducer.id} >Heyo {useri.username}</div>;
+      })
+      }</div>)
 }
 
 
