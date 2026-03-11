@@ -180,6 +180,8 @@ return (
 
 */
 
+/*
+
 const [number, setNumber] = useState(0);
 
 //En este ejemplo, el useEffect se utiliza para realizar una acción cada vez que el valor de number cambia.
@@ -191,14 +193,73 @@ useEffect(() => {
   console.log('El número ha cambiado:', number);
 }, [number]);//El useEffect se ejecutará cada vez que el valor de number cambie, 
 // lo que permite realizar acciones secundarias o efectos colaterales en respuesta a ese cambio.nn 
+//Puedes meter vsrios useEffect en un mismo componente, 
+// cada uno con diferentes dependencias para manejar diferentes efectos secundarios según las necesidades de tu aplicación.
+//Por ejemplo: 
+// useEffect(() => {
+//   console.log('El número ha cambiado:', number);
+// }, [number]);
+
+// useEffect(() => {
+//   console.log('El componente se ha montado o actualizado');
+// });
+// useEffect(() => {
+//   console.log('El componente se ha desmontado');
+//   return () => {
+//     console.log('Limpieza al desmontar el componente');
+//   };
+// }, []);
+//En este caso, el primer useEffect se ejecutará cada vez que el valor de number cambie,
+// el segundo useEffect se ejecutará cada vez que el componente se monte o actualice, 
+// y el tercer useEffect se ejecutará solo cuando el componente se desmonte, realizando una limpieza si es necesario.
+
 
 return <div>
   <div>{number}</div>
   <button onClick={() => setNumber((prev) => prev + 1)}>+</button>
 </div>
 
+*/
+
+const [user, setUser] = useState(null);
+const [loading, setLoading] = useState(false);
+const [error, setError] = useState(null);
+useEffect(() => {
+  const getUserData = async () => {
+    setLoading(true);
+    //async se utiliza para definir una función asíncrona, lo que permite el uso de la palabra clave await dentro de esa función.
+    //que es una funcion que se ejecuta de manera asíncrona, lo que significa que puede realizar operaciones que pueden tardar un tiempo en completarse,
+    //  como solicitudes a una API, sin bloquear la ejecución del resto del código.
+    try {
+      const response = await fetch('https://randomuser.me/api/');//Realiza una solicitud a la API para obtener datos de un usuario aleatorio
+      //await se utiliza para esperar a que la respuesta de la API esté disponible antes de continuar con la ejecución del código.
+      //Lo que hace que el código sea más legible y fácil de entender, ya que evita el uso de promesas y callbacks anidados.
+      const data = await response.json();
+      console.log('Datos del usuario:', data);
+      setUser(data.results[0]);
+      setLoading(false);
+
+    } catch (error) {
+      console.error('Error al obtener los datos del usuario:', error);
+      setLoading(false);  
+      setError('Error al obtener los datos del usuario');
+    }finally {
+      setLoading(false);
+    }
+
+    
+  }
+  getUserData();
+}, [])//El useEffect se ejecutará solo una vez, cuando el componente se monte por primera vez.
 
 
+return (
+  <>
+  {loading ? <div>Cargando...</div> : user && <div>{user.name.first} {user.name.last}</div>}
+  {error && <div>{error}</div>}
+    {user && user?.gender}
+  </>
+) 
 
 
 
