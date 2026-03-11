@@ -284,8 +284,120 @@ return (
   </div>
 )
 
+//REACT ROUTER DOM 
+//React Router DOM es una biblioteca de enrutamiento para aplicaciones 
+// React que permite manejar la navegación entre diferentes componentes y páginas de manera sencilla.
+//Con React Router DOM, puedes definir rutas para tus componentes y controlar qué componente se muestra en función de la URL actual.
+//Para usar React Router DOM, primero debes instalarlo en tu proyecto utilizando npm o yarn:
+//npm install react-router-dom
+//Luego, puedes importar los componentes necesarios para configurar tus rutas en tu aplicación. 
+//Los componentes principales de React Router DOM son BrowserRouter, Routes y Route.
+//BrowserRouter es el componente que envuelve toda tu aplicación y proporciona el contexto de enrutamiento.
+//Routes es el componente que contiene todas las rutas definidas en tu aplicación.
+//Route es el componente que define una ruta específica y el componente que se renderizará cuando esa ruta sea accedida.
+//Aquí tienes un ejemplo básico de cómo configurar rutas en tu aplicación utilizando React Router DOM:
+
+/*
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './Home';
+import About from './About';
+import Contact from './Contact';
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
+  );    
+
+  Tambien tenemos link y NavLink para crear enlaces de navegación entre las rutas definidas en tu aplicación.
+  Link es un componente que se utiliza para crear enlaces de navegación simples, mientras que NavLink es una variante de Link que permite aplicar estilos activos 
+  a los enlaces cuando la ruta actual coincide con la ruta del enlace.
+
+  Ejwmplo de uso de Link y NavLink:
+
+  import { Link, NavLink } from 'react-router-dom';
+
+  function Navigation() {
+    return (
+      <nav>
+        <Link to="/">Home</Link>
+        <NavLink to="/about" activeClassName="active">About</NavLink>
+        <NavLink to="/contact" activeClassName="active">Contact</NavLink>
+      </nav>
+    );
+  }
+
+  En este ejemplo, se utilizan Link para crear un enlace de navegación simple al componente Home, 
+  y NavLink para crear enlaces de navegación a los componentes About y Contact. 
+  El atributo activeClassName se utiliza para aplicar la clase CSS "active" a los enlaces cuando 
+  la ruta actual coincide con la ruta del enlace, lo que permite resaltar el enlace activo en la interfaz de usuario.
+
+  Tambien tenemos useNavigate, que es un hook que permite programáticamente navegar a diferentes rutas en tu aplicación.
+  Ejemplo de uso de useNavigate:
+
+  import { useNavigate } from 'react-router-dom';
+
+  function MyComponent() {
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+      navigate('/about'); // Navega a la ruta "/about"
+    };
+
+    return (
+      <button onClick={handleClick}>Go to About</button>
+    );
+  }
+
+  En este ejemplo, se utiliza el hook useNavigate para obtener la función navigate, que se puede utilizar para navegar a diferentes rutas en tu aplicación. 
+  En el manejador de eventos handleClick, se llama a navigate('/about') para navegar a la ruta "/about" cuando se hace clic en el botón. 
+  Esto permite una navegación programática en tu aplicación, lo que es útil para redirigir a los usuarios después de
+   realizar ciertas acciones o para manejar la navegación en función de eventos específicos. 
+
+  */
+
+   //UseReducer es un hook de React que se utiliza para manejar el estado de una manera más compleja y estructurada, 
+   // especialmente cuando el estado tiene múltiples sub-valores o cuando las actualizaciones de estado dependen del estado anterior.
+   //UseReducer es una alternativa a useState y se basa en el concepto de reducers, que son funciones puras que toman el estado actual y una acción,
+   // y devuelven un nuevo estado. El hook useReducer devuelve el estado actual y una función dispatch que se utiliza para enviar acciones al reducer.
+
+   //Ejemplo de uso de useReducer:
+
+   /*
+   import { useReducer } from 'react';
+
+   const initialState = { count: 0 };
+
+   function reducer(state, action) {
+     switch (action.type) {
+       case 'increment':
+         return { count: state.count + 1 };
+       case 'decrement':
+         return { count: state.count - 1 };
+       default:
+         throw new Error();
+     }
+   }
+
+   function Counter() {
+     const [state, dispatch] = useReducer(reducer, initialState);
+
+     return (
+       <div>
+         Count: {state.count}
+         <button onClick={() => dispatch({ type: 'increment' })}>+</button>
+         <button onClick={() => dispatch({ type: 'decrement' })}>-</button> 
+        </div>
+      );
 
 
+
+} */
 }
 
 
