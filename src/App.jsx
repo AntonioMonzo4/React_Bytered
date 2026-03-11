@@ -8,6 +8,7 @@ import Input2 from './Input2'
 import Profile from './Profile'
 import InputHandler from './InputHandler'
 import { useEffect } from 'react'
+import { useRef } from 'react'
 
 /**
  * useState es una función que permite agregar estado a los componentes funcionales en React. 
@@ -221,6 +222,7 @@ return <div>
 
 */
 
+/*
 const [user, setUser] = useState(null);
 const [loading, setLoading] = useState(false);
 const [error, setError] = useState(null);
@@ -262,6 +264,25 @@ return (
 ) 
 
 
+*/
+
+//Uso de useRef 
+const secondInputRef = useRef(null);
+
+const handleFocusInput = () => {
+
+  secondInputRef.current.focus(); // Establece el foco en el segundo input
+  secondInputRef.current.value = 'Hola Mundo'; // Cambia el valor del segundo input a "Hola Mundo"
+} 
+
+return (
+  <div>
+    <button onClick={handleFocusInput}>Click me B*tch</button>
+    <input type="text" name='' id='' className=''/>
+    <input type="text" name='' id='' className='' ref={secondInputRef}/>
+    <input type="text" name='' id='' className=''/>
+  </div>
+)
 
 
 
