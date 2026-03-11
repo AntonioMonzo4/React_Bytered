@@ -1,12 +1,13 @@
 import { useState } from 'react'//función para manejar el estado de los componentes
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+//import reactLogo from './assets/react.svg'
+//import viteLogo from '/vite.svg'
 import './App.css'
 import Input from './Input'
 import InputButton from './InputButton'
 import Input2 from './Input2'
 import Profile from './Profile'
 import InputHandler from './InputHandler'
+import { useEffect } from 'react'
 
 /**
  * useState es una función que permite agregar estado a los componentes funcionales en React. 
@@ -134,7 +135,7 @@ return (
 
 
 
-
+/*
     const [user, setUsers] = useState([
       {
         username: "Pepe",
@@ -176,6 +177,33 @@ return (
         return<div key = {useReducer.id} >Heyo {useri.username}</div>;
       })
       }</div>)
+
+*/
+
+const [number, setNumber] = useState(0);
+
+//En este ejemplo, el useEffect se utiliza para realizar una acción cada vez que el valor de number cambia.
+//El segundo argumento del useEffect es un array de dependencias, en este caso [number], 
+// lo que significa que el efecto se ejecutará cada vez que el valor de number cambie.
+
+
+useEffect(() => {
+  console.log('El número ha cambiado:', number);
+}, [number]);//El useEffect se ejecutará cada vez que el valor de number cambie, 
+// lo que permite realizar acciones secundarias o efectos colaterales en respuesta a ese cambio.nn 
+
+return <div>
+  <div>{number}</div>
+  <button onClick={() => setNumber((prev) => prev + 1)}>+</button>
+</div>
+
+
+
+
+
+
+
+
 }
 
 
